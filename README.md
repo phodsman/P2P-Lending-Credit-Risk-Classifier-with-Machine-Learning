@@ -1,7 +1,19 @@
 # P2P-Lending-Credit-Risk-Classifier-with-Machine-Learning
 
+Credit risk poses a classification problem that’s inherently imbalanced. This is because healthy loans easily outnumber risky loans. In this analysis, two machine learning techniques will be compared on a historical data set for lending activity from a peer-to-peer lending services company with the goal of finding which model is better for identifying creditworthiness of borrowers.
 
+The two machine learning methods compared will both use logistical regression on randomly split versions of the original data, with training sets and testing sets. The training set will be used to train the machine learning model, and then the model will be applied to the testing set to see how well it performs in terms of percent of correctly identified high risk loans, and percent of incorrectly identified high risk loans. Since the amount of high risk loans is a small portion of the dataset, a second model will be run using an imbalanced learning approach that oversamples the amount of high risk loans, and the results will be compared.
 
+# Technologies
+
+This program was written in Python 3.7 and can be run in Jupyter Lab.
+
+The following libraries are used:
+
+- pandas
+- numpy
+- sklearn
+- imblearn
 
 # Report
 
