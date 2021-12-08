@@ -15,6 +15,20 @@ The following libraries are used:
 - sklearn
 - imblearn
 
+# Installation Guide
+
+You will need to verify that you have installed the libraries listed in the Technologies section.
+
+# Usage
+
+The application `credit_risk_resampling.ipynb` can be run in Jupyter Lab. 
+
+## Contributors
+This program was written by Preston Hodsman based on a request for analysis from Trilogy Education Services, a 2U, Inc.
+
+## License
+MIT
+
 # Report
 
 ## Overview of the Analysis
