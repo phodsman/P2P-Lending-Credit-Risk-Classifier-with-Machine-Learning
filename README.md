@@ -2,7 +2,7 @@
 
 This application compares two methods of machine learning to analyze credit risk. A dataset of historical lending information is used. The two models used both use logistic regression, with one of them applying oversampling of the target data due to its low representation in the original data set. The two models will be compared for their usefulness with the metrics of precision and recall, recall being the percent of high risk loans being correctly identified and precision being the percent of loans the machine flags as being correctly identified.
 
-# Technologies
+## Technologies
 
 This program was written in Python 3.7 and can be run in Jupyter Lab.
 
@@ -13,11 +13,11 @@ The following libraries are used:
 - sklearn
 - imblearn
 
-# Installation Guide
+## Installation Guide
 
 You will need to verify that you have installed the libraries listed in the Technologies section.
 
-# Usage
+## Usage
 
 The application `credit_risk_resampling.ipynb` can be run in Jupyter Lab. 
 
