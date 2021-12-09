@@ -31,41 +31,28 @@ MIT
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
-
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
-
 In analyzing credit risk using machine learning techniques, due to the small amount of high risk loans in a dataset, it is possible for the results of a machine learning model to not deliver the best results in trying to identify high risk loans in another similar dataset. In this analysis, two machine learning techniques will be compared on a historical data set for lending activity from a peer-to-peer lending services company. The goal is to find which model is better for identifying creditworthiness of borrowers with similar datasets.
 
 The two machine learning methods compared will both use logistic regression on randomly split versions of the original data, with training sets and testing sets. The training set will be used to train the machine learning model, and then the model will be applied to the testing set to see how well it performs in terms of percent of correctly identified high risk loans, and percent of incorrectly identified high risk loans. Since the amount of high risk loans is a small portion of the dataset, a second model will be run using an imbalanced learning approach that oversamples the amount of high risk loans, and the results will be compared.
 
 In the original training split data set, there were 75036 good loans, and 2500 high risk loans. The resampled training split dataset oversamples the high risk loans to get a better dataset for this particular machine learning algorithm of Logistic Regression to work on, which instead has 56271 good loans and 56271 high risk loans.
 
-
-
 ## Results
-
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
 The two models are compared on three main metrics. Accuracy, precision, and recall. Accuracy is the percent of correct predictions, which includes the target(high risk loans) and the non-targets(low risk loans). Precision is the percent of predictions of the target which are correct, so it is a way to measure the percent of false positives of the model. Recall is the percent of the targets that are accurately identified, so it is a way to measure how many of the targets are missed. There is often a tradeoff between getting a higher amount of targets correctly identified and overidentifying and creating false positives for this kind of data, so the tradeoff must be measured for the particular application.
 
-
 - Machine Learning Model 1: Logistical Regression with Train-Test Split
-  - Description of Model 1 Accuracy, Precision, and Recall scores.
-
-
+  - Accuracy: 95.2%
+  - Precision: 85%
+  - Recall: 91%
 
 - Machine Learning Model 2: Logistical Regression with Resampled Train-Test Split
-  - Description of Model 2 Accuracy, Precision, and Recall scores.
+  - Accuracy: 99.4%
+  - Precision: 84%
+  - Recall: 99%
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+In this case, the Logistical Regression model using Resampled Training data seems significantly superior, with a very small rate of increased false positives. The model using Resampled data correctly identified 99 percent of high risk loans from the test data, compared to the first model which only identified 91 percent of high risk loans, with a tradeoff of only one percent more false positives. 
 
-If you do not recommend any of the models, please justify your reasoning.
+If one were to compare the costs to the platform of it having a reputation of not warning lenders 9 percent of the time that they are entering into a high risk loan arrangement vs a 1 percent chance of this, and compare this to the tradeoff of having 16 percent of borrowers who are not actually high risk having to go through extra steps or accept higher interest rates vs 15 percent, it seems obvious that the tradeoff is significantly better for the platform to adopt the machine learning approach using resampled training data.
